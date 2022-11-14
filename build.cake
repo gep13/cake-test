@@ -2,8 +2,11 @@ Task("Default")
     .Does(() => 
 {
     Information("Running build...");
+});
 
-    GitHubActions.Commands.SetStepSummary("test");
+Teardown(context =>
+{
+    GitHubActions.Commands.SetStepSummary("This is where the final step summary will go...");
 });
 
 RunTarget("Default");
