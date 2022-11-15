@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.AzurePipelines.Module</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.AzurePipelines.Module.AzurePipelinesEngine">
+            <summary>
+            <see cref="T:Cake.Core.ICakeEngine"/> implementation for Azure Pipelines.
+            </summary>
+        </member>
+        <member name="M:Cake.AzurePipelines.Module.AzurePipelinesEngine.#ctor(Cake.Core.ICakeDataService,Cake.Core.Diagnostics.ICakeLog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzurePipelines.Module.AzurePipelinesEngine"/> class.
+            </summary>
+            <param name="dataService">Implementation of <see cref="T:Cake.Core.ICakeDataService"/>.</param>
+            <param name="log">Implementation of <see cref="T:Cake.Core.Diagnostics.ICakeLog"/>.</param>
+        </member>
+        <member name="T:Cake.AzurePipelines.Module.AzurePipelinesLog">
+            <summary>
+            <see cref="T:Cake.Core.ICakeEngine"/> implementation for TF.
+            </summary>
+        </member>
+        <member name="M:Cake.AzurePipelines.Module.AzurePipelinesLog.#ctor(Cake.Core.IConsole,Cake.Core.Diagnostics.Verbosity)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzurePipelines.Module.AzurePipelinesLog"/> class.
+            </summary>
+            <param name="console">Implementation of <see cref="T:Cake.Core.IConsole"/>.</param>
+            <param name="verbosity">Default <see cref="P:Cake.AzurePipelines.Module.AzurePipelinesLog.Verbosity"/>.</param>
+        </member>
+        <member name="M:Cake.AzurePipelines.Module.AzurePipelinesLog.Write(Cake.Core.Diagnostics.Verbosity,Cake.Core.Diagnostics.LogLevel,System.String,System.Object[])">
+            <inheritdoc />
+        </member>
+        <member name="P:Cake.AzurePipelines.Module.AzurePipelinesLog.Verbosity">
+            <inheritdoc />
+        </member>
+        <member name="T:Cake.AzurePipelines.Module.AzurePipelinesModule">
+            <summary>
+            <see cref="T:Cake.Core.Composition.ICakeModule"/> implementation for Azure Pipelines.
+            </summary>
+        </member>
+        <member name="M:Cake.AzurePipelines.Module.AzurePipelinesModule.Register(Cake.Core.Composition.ICakeContainerRegistrar)">
+            <inheritdoc cref="M:Cake.Core.Composition.ICakeModule.Register(Cake.Core.Composition.ICakeContainerRegistrar)"/>
+        </member>
+        <member name="T:Cake.AzurePipelines.Module.AzurePipelinesReportPrinter">
+            <summary>
+            The TF Build/Azure Pipelines report printer.
+            </summary>
+        </member>
+        <member name="M:Cake.AzurePipelines.Module.AzurePipelinesReportPrinter.#ctor(Cake.Core.IConsole,Cake.Core.ICakeContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.AzurePipelines.Module.AzurePipelinesReportPrinter"/> class.
+            </summary>
+            <param name="console">The console.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Cake.AzurePipelines.Module.AzurePipelinesReportPrinter.Write(Cake.Core.CakeReport)">
+            <summary>
+            Writes the specified report to a target.
+            </summary>
+            <param name="report">The report to write.</param>
+        </member>
+        <member name="T:Cake.AzurePipelines.Module.Extensions">
+            <summary>
+            Extensions.
+            </summary>
+        </member>
+        <member name="M:Cake.AzurePipelines.Module.Extensions.UpdateProgress(Cake.Common.Build.AzurePipelines.IAzurePipelinesProvider,System.Guid,System.Int32)">
+            <summary>
+            Update the progress.
+            </summary>
+            <param name="provider">The <see cref="T:Cake.Common.Build.AzurePipelines.IAzurePipelinesProvider"/>.</param>
+            <param name="parent">The parent <see cref="T:System.Guid"/>.</param>
+            <param name="progress">The progress.</param>
+        </member>
+    </members>
+</doc>

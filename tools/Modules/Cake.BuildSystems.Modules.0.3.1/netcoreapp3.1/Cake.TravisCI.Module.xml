@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.TravisCI.Module</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.TravisCI.Module.Extensions">
+            <summary>
+            Extensions.
+            </summary>
+        </member>
+        <member name="M:Cake.TravisCI.Module.Extensions.ToFoldMessage(System.String)">
+            <summary>
+            Removes all spaces from the string.
+            </summary>
+            <param name="s">The string to modify.</param>
+            <returns>The modified string.</returns>
+        </member>
+        <member name="T:Cake.TravisCI.Module.TravisCIEngine">
+            <summary>
+            <see cref="T:Cake.Core.ICakeEngine"/> implementation for Travis CI.
+            </summary>
+        </member>
+        <member name="M:Cake.TravisCI.Module.TravisCIEngine.#ctor(Cake.Core.ICakeDataService,Cake.Core.IConsole)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.TravisCI.Module.TravisCIEngine"/> class.
+            </summary>
+            <param name="dataService">Implementation of <see cref="T:Cake.Core.ICakeDataService"/>.</param>
+            <param name="console">Implementation of <see cref="T:Cake.Core.IConsole"/>.</param>
+        </member>
+        <member name="T:Cake.TravisCI.Module.TravisCILog">
+            <summary>
+            <see cref="T:Cake.Core.ICakeEngine"/> implementation for Travis CI.
+            </summary>
+        </member>
+        <member name="M:Cake.TravisCI.Module.TravisCILog.#ctor(Cake.Core.IConsole,Cake.Core.Diagnostics.Verbosity)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.TravisCI.Module.TravisCILog"/> class.
+            </summary>
+            <param name="console">Implementation of <see cref="T:Cake.Core.IConsole"/>.</param>
+            <param name="verbosity">Default <see cref="T:Cake.Core.Diagnostics.Verbosity"/>.</param>
+        </member>
+        <member name="T:Cake.TravisCI.Module.TravisCIModule">
+            <summary>
+            <see cref="T:Cake.Core.Composition.ICakeModule"/> implementation for Travis CI.
+            </summary>
+        </member>
+        <member name="M:Cake.TravisCI.Module.TravisCIModule.Register(Cake.Core.Composition.ICakeContainerRegistrar)">
+            <inheritdoc cref="M:Cake.Core.Composition.ICakeModule.Register(Cake.Core.Composition.ICakeContainerRegistrar)"/>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.GitHubActions.Module</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.GitHubActions.Module.GitHubActionsEngine">
+            <summary>
+            <see cref="T:Cake.Core.ICakeEngine"/> implementation for GitHub Actions.
+            </summary>
+        </member>
+        <member name="M:Cake.GitHubActions.Module.GitHubActionsEngine.#ctor(Cake.Core.ICakeDataService,Cake.Core.Diagnostics.ICakeLog,Cake.Core.IConsole)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.GitHubActions.Module.GitHubActionsEngine"/> class.
+            </summary>
+            <param name="dataService">Implementation of <see cref="T:Cake.Core.ICakeDataService"/>.</param>
+            <param name="log">Implementation of <see cref="T:Cake.Core.Diagnostics.ICakeLog"/>.</param>
+            <param name="console">Implementation of <see cref="T:Cake.Core.IConsole"/>.</param>
+        </member>
+        <member name="T:Cake.GitHubActions.Module.GitHubActionsLog">
+            <summary>
+            <see cref="T:Cake.Core.ICakeEngine"/> implementation for GitHub Actions.
+            </summary>
+        </member>
+        <member name="M:Cake.GitHubActions.Module.GitHubActionsLog.#ctor(Cake.Core.IConsole,Cake.Core.Diagnostics.Verbosity)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.GitHubActions.Module.GitHubActionsLog"/> class.
+            </summary>
+            <param name="console">Implementation of <see cref="T:Cake.Core.IConsole"/>.</param>
+            <param name="verbosity">Default <see cref="P:Cake.GitHubActions.Module.GitHubActionsLog.Verbosity"/>.</param>
+        </member>
+        <member name="P:Cake.GitHubActions.Module.GitHubActionsLog.Verbosity">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.GitHubActions.Module.GitHubActionsLog.Write(Cake.Core.Diagnostics.Verbosity,Cake.Core.Diagnostics.LogLevel,System.String,System.Object[])">
+            <inheritdoc />
+        </member>
+        <member name="T:Cake.GitHubActions.Module.GitHubActionsModule">
+            <summary>
+            <see cref="T:Cake.Core.Composition.ICakeModule"/> implementation for GitHub Actions.
+            </summary>
+        </member>
+        <member name="M:Cake.GitHubActions.Module.GitHubActionsModule.Register(Cake.Core.Composition.ICakeContainerRegistrar)">
+            <inheritdoc cref="M:Cake.Core.Composition.ICakeModule.Register(Cake.Core.Composition.ICakeContainerRegistrar)"/>
+        </member>
+    </members>
+</doc>

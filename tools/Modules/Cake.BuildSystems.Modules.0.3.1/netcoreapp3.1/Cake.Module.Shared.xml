@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.Module.Shared</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.Module.Shared.RawBuildLog">
+            <summary>
+            Writes the log, as raw.
+            </summary>
+        </member>
+        <member name="P:Cake.Module.Shared.RawBuildLog.Verbosity">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.Module.Shared.RawBuildLog.#ctor(Cake.Core.IConsole,Cake.Core.Diagnostics.Verbosity)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Module.Shared.RawBuildLog"/> class.
+            </summary>
+            <param name="console">The <see cref="T:Cake.Core.IConsole"/> implementation to log to.</param>
+            <param name="verbosity">Initial verbosity.</param>
+        </member>
+        <member name="M:Cake.Module.Shared.RawBuildLog.Write(Cake.Core.Diagnostics.Verbosity,Cake.Core.Diagnostics.LogLevel,System.String,System.Object[])">
+            <inheritdoc />
+        </member>
+        <member name="T:Cake.Module.Shared.ServiceMessageLog">
+            <summary>
+            Writes the log, colorized.
+            </summary>
+        </member>
+        <member name="P:Cake.Module.Shared.ServiceMessageLog.Verbosity">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.Module.Shared.ServiceMessageLog.#ctor(Cake.Core.IConsole,System.Text.RegularExpressions.Regex,Cake.Core.Diagnostics.Verbosity)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Module.Shared.ServiceMessageLog"/> class.
+            </summary>
+            <param name="console">The <see cref="T:Cake.Core.IConsole"/> implementation to log to.</param>
+            <param name="formatExpression">Expression to check whether a token should be colorized.</param>
+            <param name="verbosity">Initial verbosity.</param>
+        </member>
+        <member name="M:Cake.Module.Shared.ServiceMessageLog.#ctor(Cake.Core.IConsole,System.Func{System.String,System.Boolean},Cake.Core.Diagnostics.Verbosity)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Module.Shared.ServiceMessageLog"/> class.
+            </summary>
+            <param name="console">The <see cref="T:Cake.Core.IConsole"/> implementation to log to.</param>
+            <param name="match">Predicate to check whether a token should be colorized.</param>
+            <param name="verbosity">Initial verbosity.</param>
+        </member>
+        <member name="M:Cake.Module.Shared.ServiceMessageLog.Write(Cake.Core.Diagnostics.Verbosity,Cake.Core.Diagnostics.LogLevel,System.String,System.Object[])">
+            <inheritdoc />
+        </member>
+        <member name="T:Cake.Module.Shared.CakeEngineBase">
+            <summary>
+            Base-implementation for a wrapped <see cref="T:Cake.Core.ICakeEngine"/> - the base Shared Engine used by CI modules.
+            </summary>
+        </member>
+        <member name="F:Cake.Module.Shared.CakeEngineBase._engine">
+            <summary>
+            Gets the wrapped <see cref="T:Cake.Core.ICakeEngine"/>.
+            </summary>
+        </member>
+        <member name="M:Cake.Module.Shared.CakeEngineBase.#ctor(Cake.Core.ICakeEngine)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Module.Shared.CakeEngineBase"/> class.
+            </summary>
+            <param name="implementation">The wrapped <see cref="T:Cake.Core.ICakeEngine"/>.</param>
+        </member>
+        <member name="E:Cake.Module.Shared.CakeEngineBase.Setup">
+            <inheritdoc cref="E:Cake.Core.ICakeEngine.Setup"/>
+        </member>
+        <member name="E:Cake.Module.Shared.CakeEngineBase.BeforeSetup">
+            <inheritdoc cref="E:Cake.Core.ICakeEngine.BeforeSetup"/>
+        </member>
+        <member name="E:Cake.Module.Shared.CakeEngineBase.AfterSetup">
+            <inheritdoc cref="E:Cake.Core.ICakeEngine.AfterSetup"/>
+        </member>
+        <member name="E:Cake.Module.Shared.CakeEngineBase.Teardown">
+            <inheritdoc cref="E:Cake.Core.ICakeEngine.Teardown"/>
+        </member>
+        <member name="E:Cake.Module.Shared.CakeEngineBase.BeforeTeardown">
+            <inheritdoc cref="E:Cake.Core.ICakeEngine.BeforeTeardown"/>
+        </member>
+        <member name="E:Cake.Module.Shared.CakeEngineBase.AfterTeardown">
+            <inheritdoc cref="E:Cake.Core.ICakeEngine.AfterTeardown"/>
+        </member>
+        <member name="E:Cake.Module.Shared.CakeEngineBase.TaskSetup">
+            <inheritdoc cref="E:Cake.Core.ICakeEngine.TaskSetup"/>
+        </member>
+        <member name="E:Cake.Module.Shared.CakeEngineBase.BeforeTaskSetup">
+            <inheritdoc cref="E:Cake.Core.ICakeEngine.BeforeTaskSetup"/>
+        </member>
+        <member name="E:Cake.Module.Shared.CakeEngineBase.AfterTaskSetup">
+            <inheritdoc cref="E:Cake.Core.ICakeEngine.AfterTaskSetup"/>
+        </member>
+        <member name="E:Cake.Module.Shared.CakeEngineBase.TaskTeardown">
+            <inheritdoc cref="E:Cake.Core.ICakeEngine.TaskTeardown"/>
+        </member>
+        <member name="E:Cake.Module.Shared.CakeEngineBase.BeforeTaskTeardown">
+            <inheritdoc cref="E:Cake.Core.ICakeEngine.BeforeTaskTeardown"/>
+        </member>
+        <member name="E:Cake.Module.Shared.CakeEngineBase.AfterTaskTeardown">
+            <inheritdoc cref="E:Cake.Core.ICakeEngine.AfterTaskTeardown"/>
+        </member>
+        <member name="P:Cake.Module.Shared.CakeEngineBase.Cake#Core#ICakeEngine#Tasks">
+            <inheritdoc />
+        </member>
+        <member name="P:Cake.Module.Shared.CakeEngineBase.Tasks">
+            <summary>Gets all registered tasks.</summary>
+            <value>The registered tasks.</value>
+        </member>
+        <member name="M:Cake.Module.Shared.CakeEngineBase.RegisterTask(System.String)">
+            <summary>Registers a new task.</summary>
+            <param name="name">The name of the task.</param>
+            <returns>A <see cref="T:Cake.Core.CakeTaskBuilder`1" />.</returns>
+        </member>
+        <member name="M:Cake.Module.Shared.CakeEngineBase.RegisterSetupAction(System.Action{Cake.Core.ISetupContext})">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.Module.Shared.CakeEngineBase.RegisterSetupAction``1(System.Func{Cake.Core.ISetupContext,``0})">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.Module.Shared.CakeEngineBase.RegisterSetupAction(System.Action{Cake.Core.ICakeContext})">
+            <summary>
+                Allows registration of an action that's executed before any tasks are run.
+                If setup fails, no tasks will be executed but teardown will be performed.
+            </summary>
+            <param name="action">The action to be executed.</param>
+        </member>
+        <member name="M:Cake.Module.Shared.CakeEngineBase.RegisterTeardownAction(System.Action{Cake.Core.ITeardownContext})">
+            <summary>
+                Allows registration of an action that's executed after all other tasks have been run.
+                If a setup action or a task fails with or without recovery, the specified teardown action will still be executed.
+            </summary>
+            <param name="action">The action to be executed.</param>
+        </member>
+        <member name="M:Cake.Module.Shared.CakeEngineBase.RegisterTeardownAction``1(System.Action{Cake.Core.ITeardownContext,``0})">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.Module.Shared.CakeEngineBase.RunTargetAsync(Cake.Core.ICakeContext,Cake.Core.IExecutionStrategy,Cake.Core.ExecutionSettings)">
+            <summary>
+            Runs the specified target using the specified <see cref="T:Cake.Core.IExecutionStrategy" />.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="strategy">The execution strategy.</param>
+            <param name="settings">The execution settings.</param>
+            <returns>
+            The resulting report.
+            </returns>
+        </member>
+        <member name="M:Cake.Module.Shared.CakeEngineBase.RegisterTaskSetupAction(System.Action{Cake.Core.ITaskSetupContext})">
+            <summary>
+                Allows registration of an action that's executed before each task is run.
+                If the task setup fails, the task will not be executed but the task's teardown will be performed.
+            </summary>
+            <param name="action">The action to be executed.</param>
+        </member>
+        <member name="M:Cake.Module.Shared.CakeEngineBase.RegisterTaskSetupAction``1(System.Action{Cake.Core.ITaskSetupContext,``0})">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.Module.Shared.CakeEngineBase.RegisterTaskTeardownAction(System.Action{Cake.Core.ITaskTeardownContext})">
+            <summary>
+                Allows registration of an action that's executed after each task has been run.
+                If a task setup action or a task fails with or without recovery, the specified task teardown action will still be
+                executed.
+            </summary>
+            <param name="action">The action to be executed.</param>
+        </member>
+        <member name="M:Cake.Module.Shared.CakeEngineBase.RegisterTaskTeardownAction``1(System.Action{Cake.Core.ITaskTeardownContext,``0})">
+            <inheritdoc />
+        </member>
+        <member name="T:Cake.Module.Shared.CakeReportPrinterBase">
+            <summary>
+            Base-implementation for <see cref="T:Cake.Core.ICakeReportPrinter"/>.
+            </summary>
+        </member>
+        <member name="F:Cake.Module.Shared.CakeReportPrinterBase._context">
+            <summary>
+            Gets the <see cref="T:Cake.Core.ICakeContext"/>.
+            </summary>
+        </member>
+        <member name="F:Cake.Module.Shared.CakeReportPrinterBase._console">
+            <summary>
+            Gets the <see cref="T:Cake.Core.IConsole"/>.
+            </summary>
+        </member>
+        <member name="M:Cake.Module.Shared.CakeReportPrinterBase.#ctor(Cake.Core.IConsole,Cake.Core.ICakeContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Module.Shared.CakeReportPrinterBase"/> class.
+            </summary>
+            <param name="console">The <see cref="T:Cake.Core.IConsole"/>.</param>
+            <param name="context">The <see cref="T:Cake.Core.ICakeContext"/>.</param>
+        </member>
+        <member name="M:Cake.Module.Shared.CakeReportPrinterBase.Write(Cake.Core.CakeReport)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.Module.Shared.CakeReportPrinterBase.WriteToConsole(Cake.Core.CakeReport)">
+            <summary>
+            Writes the report to the <see cref="T:Cake.Core.IConsole"/>.
+            </summary>
+            <param name="report">The report to write.</param>
+        </member>
+        <member name="M:Cake.Module.Shared.CakeReportPrinterBase.ShouldWriteTask(Cake.Core.CakeReportEntry)">
+            <summary>
+            Check if the <see cref="T:Cake.Core.CakeReportEntry"/> should be written.
+            </summary>
+            <param name="item">The <see cref="T:Cake.Core.CakeReportEntry"/> to check.</param>
+            <returns><c>true</c>, if the <see cref="T:Cake.Core.CakeReportEntry"/> should be written.</returns>
+        </member>
+        <member name="M:Cake.Module.Shared.CakeReportPrinterBase.FormatTime(System.TimeSpan)">
+            <summary>
+            Formats a <see cref="T:System.TimeSpan"/>.
+            </summary>
+            <param name="time">The <see cref="T:System.TimeSpan"/> to format.</param>
+            <returns>A formatted string.</returns>
+        </member>
+        <member name="M:Cake.Module.Shared.CakeReportPrinterBase.GetTotalTime(System.Collections.Generic.IEnumerable{Cake.Core.CakeReportEntry})">
+            <summary>
+            Calculates the total time it took to process all <see cref="T:Cake.Core.CakeReportEntry"/> elements.
+            </summary>
+            <param name="entries">The entries to calculate.</param>
+            <returns>The sum of time it took to perform all entries.</returns>
+        </member>
+        <member name="M:Cake.Module.Shared.CakeReportPrinterBase.FormatDuration(Cake.Core.CakeReportEntry)">
+            <summary>
+            Returns the formatted time it took to process one <see cref="T:Cake.Core.CakeReportEntry"/>.
+            </summary>
+            <param name="item">The <see cref="T:Cake.Core.CakeReportEntry"/>.</param>
+            <returns>The formatted time.</returns>
+        </member>
+        <member name="M:Cake.Module.Shared.CakeReportPrinterBase.GetItemForegroundColor(Cake.Core.CakeReportEntry)">
+            <summary>
+            Calculates the foreground color required to write out one <see cref="T:Cake.Core.CakeReportEntry"/>.
+            </summary>
+            <param name="item">The <see cref="T:Cake.Core.CakeReportEntry"/>.</param>
+            <returns>The calculated <see cref="T:System.ConsoleColor"/>.</returns>
+        </member>
+        <member name="T:Cake.Module.Shared.Extensions">
+            <summary>
+            Extensions.
+            </summary>
+        </member>
+        <member name="M:Cake.Module.Shared.Extensions.GetConfigFlag(Cake.Core.Configuration.ICakeConfiguration,System.String)">
+            <summary>
+            Get a config-value as a flag from the <see cref="T:Cake.Core.Configuration.ICakeConfiguration"/>.
+            </summary>
+            <param name="config">The <see cref="T:Cake.Core.Configuration.ICakeConfiguration"/>.</param>
+            <param name="key">The config key to get.</param>
+            <returns><c>true</c>, if the config key exists and equals the text <c>"True"</c>. Otherwise, <c>false</c>.</returns>
+        </member>
+    </members>
+</doc>
