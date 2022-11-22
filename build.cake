@@ -1,3 +1,10 @@
+#module nuget:?package=Cake.BuildSystems.Module&version=4.2.0
+
+Setup(context =>
+{
+    Information("This is the setup...");
+});
+
 Task("DependencyA")
     .IsDependentOn("DependencyB")
     .Does(() =>
