@@ -36,7 +36,7 @@ Task("DependencyB")
 });
 
 Task("Skipped")
-    .WithCriteria(() => true, "This is a skipped task")
+    .WithCriteria(() => false, "This is a skipped task")
     .Does(() =>
 {
     Information("This is a skipped task");
