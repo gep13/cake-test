@@ -35,8 +35,16 @@ Task("DependencyB")
     Information("Dependency B");
 });
 
+Task("Skipped")
+    .WithCriteria(() => true, "This is a skipped task")
+    .Does(() =>
+{
+    Information("This is a skipped task");
+});
+
 Task("Default")
     .IsDependentOn("DependencyA")
+    .IsDependentOn("Skipped")
     .Does(() => 
 {
     Information("Running build...");
