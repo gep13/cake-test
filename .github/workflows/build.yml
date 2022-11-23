@@ -27,3 +27,4 @@ jobs:
         with:
           target: Default
           cake-version: tool-manifest
+          verbosity: Diagnostic
