@@ -27,7 +27,6 @@ jobs:
         with:
           target: Default
           cake-version: tool-manifest
-          verbosity: Diagnostic
       - name: Group of log lines
         run: |
             echo "::group::My title"
