@@ -18,6 +18,11 @@ Task("DependencyA")
 Task("DependencyB")
     .Does(() =>
 {
+    if(IsRunningOnWindows())
+    {
+        throw new Exception("bob");
+    }
+    
     Information("Dependency B");
 });
 
