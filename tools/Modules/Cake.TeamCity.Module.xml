@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.TeamCity.Module</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.TeamCity.Module.TeamCityEngine">
+            <summary>
+            <see cref="T:Cake.Core.ICakeEngine"/> implementation for TeamCity.
+            </summary>
+        </member>
+        <member name="M:Cake.TeamCity.Module.TeamCityEngine.#ctor(Cake.Core.ICakeDataService,Cake.Core.Diagnostics.ICakeLog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.TeamCity.Module.TeamCityEngine"/> class.
+            </summary>
+            <param name="dataService">Implementation of <see cref="T:Cake.Core.ICakeDataService"/>.</param>
+            <param name="log">Implementation of <see cref="T:Cake.Core.Diagnostics.ICakeLog"/>.</param>
+        </member>
+        <member name="T:Cake.TeamCity.Module.TeamCityLog">
+            <summary>
+            <see cref="T:Cake.Core.ICakeEngine"/> implementation for TeamCity.
+            </summary>
+        </member>
+        <member name="M:Cake.TeamCity.Module.TeamCityLog.#ctor(Cake.Core.IConsole,Cake.Core.Diagnostics.Verbosity)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.TeamCity.Module.TeamCityLog"/> class.
+            </summary>
+            <param name="console">Implementation of <see cref="T:Cake.Core.IConsole"/>.</param>
+            <param name="verbosity">Default <see cref="P:Cake.TeamCity.Module.TeamCityLog.Verbosity"/>.</param>
+        </member>
+        <member name="M:Cake.TeamCity.Module.TeamCityLog.Write(Cake.Core.Diagnostics.Verbosity,Cake.Core.Diagnostics.LogLevel,System.String,System.Object[])">
+            <inheritdoc />
+        </member>
+        <member name="P:Cake.TeamCity.Module.TeamCityLog.Verbosity">
+            <inheritdoc />
+        </member>
+        <member name="T:Cake.TeamCity.Module.TeamCityModule">
+            <summary>
+            <see cref="T:Cake.Core.Composition.ICakeModule"/> implementation for TeamCity.
+            </summary>
+        </member>
+        <member name="M:Cake.TeamCity.Module.TeamCityModule.Register(Cake.Core.Composition.ICakeContainerRegistrar)">
+            <inheritdoc cref="M:Cake.Core.Composition.ICakeModule.Register(Cake.Core.Composition.ICakeContainerRegistrar)"/>
+        </member>
+    </members>
+</doc>
