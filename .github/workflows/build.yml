@@ -31,5 +31,8 @@ jobs:
       - name: Group of log lines
         run: |
             echo "::group::My title"
+            echo "::group::Nested Group"
+            echo "Inside nested group"
+            echo "::endgroup::
             echo "Inside group"
             echo "::endgroup::"
