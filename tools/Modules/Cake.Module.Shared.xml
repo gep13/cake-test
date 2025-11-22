@@ -182,13 +182,13 @@
             <inheritdoc />
         </member>
         <member name="M:Cake.Module.Shared.CakeReportPrinterBase.WriteLifeCycleStep(System.String,Cake.Core.Diagnostics.Verbosity)">
-            <inheritdoc />
+            <inheritdoc/>
         </member>
         <member name="M:Cake.Module.Shared.CakeReportPrinterBase.WriteStep(System.String,Cake.Core.Diagnostics.Verbosity)">
-            <inheritdoc />
+            <inheritdoc/>
         </member>
         <member name="M:Cake.Module.Shared.CakeReportPrinterBase.WriteSkippedStep(System.String,Cake.Core.Diagnostics.Verbosity)">
-            <inheritdoc />
+            <inheritdoc/>
         </member>
         <member name="M:Cake.Module.Shared.CakeReportPrinterBase.WriteToConsole(Cake.Core.CakeReport)">
             <summary>

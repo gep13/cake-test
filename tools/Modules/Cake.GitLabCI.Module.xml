@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.GitLabCI.Module</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.GitLabCI.Module.GitLabCIEngine">
+            <summary>
+            <see cref="T:Cake.Core.ICakeEngine"/> implementation for GitLab CI.
+            </summary>
+            <remarks>
+            This engine emits additional console output to make GitLab CI render the output of the indiviudal Cake tasks as collapsible sections
+            (see <see href="https://docs.gitlab.com/ee/ci/yaml/script.html#custom-collapsible-sections">Custom collapsible sections (GitLab Docs)</see>).
+            </remarks>
+        </member>
+        <member name="M:Cake.GitLabCI.Module.GitLabCIEngine.#ctor(Cake.Core.ICakeDataService,Cake.Core.Diagnostics.ICakeLog,Cake.Core.IConsole)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.GitLabCI.Module.GitLabCIEngine"/> class.
+            </summary>
+            <param name="dataService">Implementation of <see cref="T:Cake.Core.ICakeDataService"/>.</param>
+            <param name="log">Implementation of <see cref="T:Cake.Core.Diagnostics.ICakeLog"/>.</param>
+            <param name="console">Implementation of <see cref="T:Cake.Core.IConsole"/>.</param>
+        </member>
+        <member name="M:Cake.GitLabCI.Module.GitLabCIEngine.GetSectionNameForTask(System.String)">
+            <summary>
+            Computes a unique GitLab CI section name for a task name.
+            </summary>
+            <remarks>
+            GitLab CI requires a section name in both the "start" and "end" markers of a section.
+            The name can only be composed of letters, numbers, and the _, ., or - characters.
+            In Cake, each task corresponds to one section.
+            Since the task name may contain characters not allowed in the section name, unsupprted characters are removed from the task name.
+            Additionally, this method ensures that the section name is unique and the same task name will be mapped to the same section name for each call.
+            </remarks>
+        </member>
+        <member name="T:Cake.GitLabCI.Module.GitLabCILog">
+            <summary>
+            <see cref="T:Cake.Core.Diagnostics.ICakeLog"/> implementation for GitLab CI.
+            </summary>
+        </member>
+        <member name="M:Cake.GitLabCI.Module.GitLabCILog.#ctor(Cake.Core.IConsole,Cake.Core.Diagnostics.Verbosity)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.GitLabCI.Module.GitLabCILog"/> class.
+            </summary>
+            <param name="console">Implementation of <see cref="T:Cake.Core.IConsole"/>.</param>
+            <param name="verbosity">Default <see cref="P:Cake.GitLabCI.Module.GitLabCILog.Verbosity"/>.</param>
+        </member>
+        <member name="P:Cake.GitLabCI.Module.GitLabCILog.Verbosity">
+            <inheritdoc />
+        </member>
+        <member name="M:Cake.GitLabCI.Module.GitLabCILog.Write(Cake.Core.Diagnostics.Verbosity,Cake.Core.Diagnostics.LogLevel,System.String,System.Object[])">
+            <inheritdoc />
+        </member>
+        <member name="T:Cake.GitLabCI.Module.GitLabCIModule">
+            <summary>
+            <see cref="T:Cake.Core.Composition.ICakeModule"/> implementation for GitLab CI.
+            </summary>
+        </member>
+        <member name="M:Cake.GitLabCI.Module.GitLabCIModule.Register(Cake.Core.Composition.ICakeContainerRegistrar)">
+            <inheritdoc cref="M:Cake.Core.Composition.ICakeModule.Register(Cake.Core.Composition.ICakeContainerRegistrar)"/>
+        </member>
+        <member name="T:Cake.AzurePipelines.Module.GitLabCIModule">
+            <summary>
+            Legacy <see cref="T:Cake.Core.Composition.ICakeModule"/> implementation for GitLab CI.
+            </summary>
+            <remarks>
+            When <see cref="T:Cake.AzurePipelines.Module.GitLabCIModule"/> was introduced initially, it was placed in the <c>Cake.AzurePipelines.Module</c> namespace by accident.
+            <para>
+            The namespace has since been adjusted, but this class is still provided in the <c>Cake.AzurePipelines.Module</c> namespace for backwards compatibility in Cake.Frosting projects.
+            When possible, use <see cref="T:Cake.GitLabCI.Module.GitLabCIModule"/> instead.
+            </para>
+            </remarks>
+        </member>
+    </members>
+</doc>
