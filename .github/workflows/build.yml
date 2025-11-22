@@ -14,18 +14,18 @@ jobs:
         os: [windows-latest, macos-latest, ubuntu-latest]
     steps:
       - name: Get the sources
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
       - name: Install .NET Core SDK (global.json)
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v5
         with:
           global-json-file: global.json
 
       - name: Run Cake script
         id: build-cake
-        uses: cake-build/cake-action@v1
+        uses: cake-build/cake-action@v3
         with:
           target: Default
           cake-version: tool-manifest
