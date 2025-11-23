@@ -71,14 +71,5 @@
         <member name="M:Cake.MyGet.Module.MyGetReportPrinter.Write(Cake.Core.CakeReport)">
             <inheritdoc />
         </member>
-        <member name="M:Cake.MyGet.Module.MyGetReportPrinter.WriteStep(System.String,Cake.Core.Diagnostics.Verbosity)">
-            <inheritdoc />
-        </member>
-        <member name="M:Cake.MyGet.Module.MyGetReportPrinter.WriteLifeCycleStep(System.String,Cake.Core.Diagnostics.Verbosity)">
-            <inheritdoc />
-        </member>
-        <member name="M:Cake.MyGet.Module.MyGetReportPrinter.WriteSkippedStep(System.String,Cake.Core.Diagnostics.Verbosity)">
-            <inheritdoc />
-        </member>
     </members>
 </doc>
